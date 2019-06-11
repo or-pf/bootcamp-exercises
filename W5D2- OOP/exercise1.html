@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>OOP- exercise1</title>
+</head>
+
+<body>
+    <script>
+        class Dog {
+            constructor(name, type, age, isCuddle) {
+                this.name = name;
+                this.type = type;
+                this.age = age;
+                this.isCuddle = true;
+            }
+        }
+
+        let dog1 = new Dog("luka", "mixed-race", "1", false);
+        let dog2 = new Dog("rexi", "buldog", "4", true);
+        let dog3 = new Dog("blacki", "chaw-chaw", "5", false);
+
+        function describe(dog) {
+            console.log("this is " + dog.name + " a " + dog.type + " it is " + dog.age + " years old ");
+            if (dog.isCuddle) {
+                console.log("and it loves to cuddle");
+            }
+            else
+                console.log("and it doesn't loves to cuddle");
+        }
+
+        let dogs = [dog1, dog2, dog3];
+        function describeDogs(dogs) {
+            dogs.forEach(dog => {
+                describe(dog);
+            });
+        }
+        describeDogs(dogs);
+    </script>
+</body>
+
+</html>

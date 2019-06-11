@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>OOP- exercise2</title>
+</head>
+
+<body>
+    <script>
+        class Dog {
+            constructor(name, type, age, isCuddle) {
+                this.name = name;
+                this.type = type;
+                this.age = age;
+                this.isCuddle = true;
+            }
+        }
+
+        let dog1 = new Dog("luka", "mixed-race", "1", false);
+        let dog2 = new Dog("rexi", "buldog", "4", true);
+        let dog3 = new Dog("blacki", "chaw-chaw", "5", false);
+        let dog4 = new Dog("pizti", "chaw-chaw", "5", false);
+        let dog5 = new Dog("looli", "chaw-chaw", "5", false);
+
+
+        function printDogsOfType(array, type) {
+            array.forEach(element => {
+                if (element.type === type) {
+                    console.log (element.name);
+                    return element.name
+                }
+            });
+        }
+
+        let dogs = [dog1, dog2, dog3, dog4, dog5];
+        printDogsOfType(dogs, "chaw-chaw");
+
+
+    </script>
+</body>
+
+</html>

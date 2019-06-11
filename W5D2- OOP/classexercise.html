@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>OOP class exercise</title>
+</head>
+
+<body>
+
+
+    <script>
+        class Car {
+            constructor(color, brand) {
+                this.color = color;
+                this.brand = brand;
+            }
+        }
+        let swift = new Car("green", "Suzuki");
+        let civic = new Car("black", "Honda");
+
+        let polo = new Car("silver", "folkwagon");
+        let prios = new Car("white", "toyota");
+        let saab = new Car("red", "renault");
+
+        class Jewel {
+            constructor(type, price, department) {
+                this.type = type;
+                this.price = price;
+                this.department = department;
+            }
+        }
+        let goldring = new Jewel("ring", 250, "sale");
+        let neckless = new Jewel("neckless", 300, "luxury");
+
+        class Shop {
+            constructor(name, adress) {
+                this.name = name.toUpperCase();
+                this.address = adress;
+                this.opening = 8;
+                this.type = "book store";
+            }
+        }
+        let shop1 = new Shop("littel prince", "king george st. 19");
+        let shop2 = new Shop("stimatzky", "hertzel 12");
+        shop1.opening = 10;
+
+        let ring = new Jewel("ring", 400);
+        let bracelet = new Jewel("bracelet", 400);
+        
+        function getHigherPrice(jewl1, jewl2) {
+            if (jewl1.price < jewl2.price) {
+                console.log(jewl2.price);
+                return jewl2.price;
+            }
+            if (jewl1.price === jewl2.price) {
+                console.log("price is the same");
+            }
+            else 
+            console.log(jewl1.price);
+            return jewl1.price
+        }
+        getHigherPrice(ring, bracelet);
+
+
+    </script>
+</body>
+
+</html>
