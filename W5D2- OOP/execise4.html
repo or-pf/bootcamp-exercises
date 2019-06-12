@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>OOP- ex 4</title>
+</head>
+
+<body>
+
+    <script>
+        class Player {
+            constructor(name) {
+                this.name = name;
+                this.score = 0;
+            }
+        }
+
+        let player1 = new Player("mika");
+
+        function play(player) {
+            let randomNumber = Math.floor(Math.random() * 11);
+            console.log(randomNumber);
+            if (randomNumber % 2 === 0) {
+                player.score++;
+            }
+        }
+
+        function manyRounds(number, player) {
+            for (let i = 0; i < number; i++) {
+                play(player);
+            } 
+            console.log(player.name + "'s score is " + player.score);
+        }
+        manyRounds(3, player1);
+
+    </script>
+</body>
+
+</html>
