@@ -13,15 +13,15 @@
         class Shoes {
             constructor(name, avSize) {
                 this.name = name;
-                this.avSize = [];
+                this.avSize = avSize;
             }
 
             isAvailable(size) {
-                if (this.avSize.includes(size)){
-                    console.log("the "+this.name +" shoe is available in size " + size)
+                if (this.avSize.includes(size)) {
+                    console.log("the " + this.name + " shoe is available in size " + size)
                 }
-                else 
-                console.log("the "+this.name +" shoe is unavailable in size " + size)
+                else
+                    console.log("the " + this.name + " shoe is unavailable in size " + size)
             }
         }
         let shoe1 = new Shoes("Star-Shoes");
@@ -30,9 +30,9 @@
         shoe1.isAvailable(38);
         shoe1.isAvailable(42);
 
-        let shoe2 = new Shoes("blandstone", "11,14,15");
+        let shoe2 = new Shoes("blandstone", [11, 14, 15]);
+        shoe2.isAvailable(14);
 
-        
 
     </script>
 </body>
@@ -41,14 +41,14 @@
 
 /*
 this.avSize.forEach((Element) => {
-    // console.log(Element);
-    if (Element === size) {
-        console.log("the shoe is available in size " + size)
-        // return true;
-    }
-    if (Element !== size) {
-        console.log("the shoe is unavailable in size " + size)
-        // return false;
-    }
+// console.log(Element);
+if (Element === size) {
+console.log("the shoe is available in size " + size)
+// return true;
+}
+if (Element !== size) {
+console.log("the shoe is unavailable in size " + size)
+// return false;
+}
 });
 */
