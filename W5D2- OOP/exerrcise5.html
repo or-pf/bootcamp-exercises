@@ -1,18 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>OOP - ex5</title>
 </head>
+
 <body>
     <script>
-    class Shape {
-        constructor (type, color){
-this.name =
+        class Shape {
+            constructor(type, color) {
+                this.type = type;
+                this.color = color;
+            }
         }
-    }
+
+        let circle = new Shape("circle", "blue");
+        circle.radius = 3;
+
+        let square = new Shape("square", "red");
+        square.edgeLength = 5;
+
+        square.calcArea = function (edgeLength) {
+            let area = Math.pow(edgeLength, 2);
+            console.log("this is the square area :"+area);
+        }
+        square.calcArea(square.edgeLength);
+
+        circle.calcArea = function (radius) {
+            let area = 3.14 * (Math.pow(radius, 2));
+            console.log("this is the circle area :" +area);
+        }
+        circle.calcArea(circle.radius);
+
+
+        function calcShapeArea(shape) {
+            if (shape.type === "circle") {
+                let Carea = 3.14 * (Math.pow(shape.radius, 2));
+                console.log("this is the circle area :" +Carea);
+            }
+            if (shape.type === "square") {
+                let Sarea = Math.pow(square.edgeLength, 2);
+                console.log("this is the square area :"+Sarea);
+            }
+        }     
+        calcShapeArea(square);
+        calcShapeArea(circle);
+
+        square.calcArea2 = function(){
+            let area = Math.pow((this.edgeLength), 2);
+            console.log("this is the square area :"+area);
+        }
+        square.calcArea2();
+        
+        circle.calcArea2 = function () {
+            let area = 3.14 * (Math.pow((this.radius), 2));
+            console.log("this is the circle area :" +area);
+        }
+        circle.calcArea2();
+
+
     </script>
 </body>
+
 </html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>OOP 2- class ex</title>
+</head>
+
+<body>
+
+    <script>
+        class Player {
+            constructor(name) {
+                this.name = name;
+                this.score = 0;
+            }
+            didWin() {
+                return this.score > 30
+                /*
+                if (this.score > 30) {
+                    console.log("score is higher than 30");
+                    return true;   
+                }
+                */
+            }
+            checkIfPlayerWon() {
+                if (this.didWin()) {
+                    console.log(this.name + " won!")
+                }
+                else
+                    console.log(this.name + " lost :-(")
+            }
+        }
+        let player1 = new Player("mika");
+        player1.score = 32;
+        player1.checkIfPlayerWon();
+
+    </script>
+</body>
+
+</html>
+
+Create Player class.
+It should have the following attributes:
+Name – will be an argument of the constructor
+Score – set to 0 at creation
+and a method didWin - that checks if the score is higher than 30.
+1. Create a player instance.
+2. Set its score to 32.
+3. Invoke the didWin method.
