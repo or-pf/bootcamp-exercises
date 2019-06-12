@@ -36,7 +36,7 @@
 
         function calcShapeArea(shape) {
             if (shape.type === "circle") {
-               return 3.14 * (Math.pow(shape.radius, 2));
+                return 3.14 * (Math.pow(shape.radius, 2));
             }
             if (shape.type === "square") {
                 return Math.pow(square.edgeLength, 2);
@@ -55,7 +55,7 @@
         }
         circle.calcArea2();
 
-        function calcShapeArea2(shape) { //this is a function that recieves a parameter of shape- it could work with both circle and square
+        function calcShapeArea2(shape) { //this is a function that receives a parameter of shape- it could work with both circle and square
             return shape.calcArea2();
         }
         calcShapeArea2(square);
