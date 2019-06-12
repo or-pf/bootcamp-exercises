@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>OOP2- ex2</title>
+</head>
+
+<body>
+
+    <script>
+        class Point {
+            constructor(x, y) {
+                this.x = x;
+                this.y = y;
+            }
+            plus(point2) {
+                let a = this.x + point2.x
+                let b = this.y + point2.y
+                let pointNew = new Point(a, b);
+                console.log(pointNew);
+            }
+        }
+
+        let point1 = new Point(1, 2);
+        let point2 = new Point(3, 0);
+        let point3 = new Point(5, -1);
+        point1.plus(point2);
+        point2.plus(point3);
+
+    </script>
+</body>
+
+</html>

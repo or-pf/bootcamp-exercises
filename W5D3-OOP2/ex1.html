@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>OOP2- ex1</title>
+</head>
+
+<body>
+    <script>
+        class Shoes {
+            constructor(name, avSize) {
+                this.name = name;
+                this.avSize = [];
+            }
+
+            isAvailable(size) {
+                if (this.avSize.includes(size)){
+                    console.log("the "+this.name +" shoe is available in size " + size)
+                }
+                else 
+                console.log("the "+this.name +" shoe is unavailable in size " + size)
+            }
+        }
+        let shoe1 = new Shoes("Star-Shoes");
+        shoe1.avSize = [36, 38, 44];
+
+        shoe1.isAvailable(38);
+        shoe1.isAvailable(42);
+
+        let shoe2 = new Shoes("blandstone", "11,14,15");
+
+        
+
+    </script>
+</body>
+
+</html>
+
+/*
+this.avSize.forEach((Element) => {
+    // console.log(Element);
+    if (Element === size) {
+        console.log("the shoe is available in size " + size)
+        // return true;
+    }
+    if (Element !== size) {
+        console.log("the shoe is unavailable in size " + size)
+        // return false;
+    }
+});
+*/
