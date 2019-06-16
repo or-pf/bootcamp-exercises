@@ -1,6 +1,6 @@
 class Board {
     constructor(height, width) {
-        this.cards = this.createBoardCards(height, width);
+        this.boardLayout = this.createBoardCards(height, width);
     }
 
     createBoardCards(height, width) {
@@ -14,15 +14,27 @@ class Board {
             cardsArray.push(rowArray);
         }
         return cardsArray;
+
+        
     }
+    /*AssignPics(){
 
-    randomizeCards() {
-
-        cardsArray.forEach(card => {
-            card.picNumber = Math.floor((Math.random() * 12) + 1);
-        });
-        // let randomNum = Math.floor((Math.random() * 12) + 1);
-        // this.picNumber = randomNum
-
-    }
+        for (let i= 0; i < (random.length); i++){
+            card.picNumber =i;
+        }
+    }*/
+    
 }
+
+$('button').click(function() {
+    
+    $('.output').empty();
+    
+    for (var a = [0, 1, 2, 3, 4, 5], i = a.length; i--; ) {
+        var random = a.splice(Math.floor(Math.random() * (i + 1)), 1)[0];
+        $('.output').append('<span>' + random + '</span>');
+            // card.picNumber = random;
+    }
+    
+})
+.click();
