@@ -1,14 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>OOP2- ex3</title>
 </head>
+
 <body>
-    
+
     <script>
+        class Account {
+            constructor(sum) {
+                this.sum = sum;
+            }
+            deposit(value) {
+                this.sum += value;
+            }
+            withdraw(value) {
+                this.sum -= value;
+            }
+            canWithdraw(value) {
+                if (value < this.sum) return true;
+                else return false;
+            }
+            lottery() {
+                if (!this.canWithdraw(100)) {
+                    alert("you don't have enough in your account");
+                    return;
+                }
+                let prize = Math.floor(Math.random() * 101);
+                console.log ("prize is "+ prize);
+                let chance = Math.floor(Math.random() * 2);
+                console.log ("chance is "+ chance);
+
+                if (chance === 1) {
+                    this.deposit(prize + 30);
+                }
+                else this.withdraw(prize);
+                console.log (this.sum);
+            }
+        }
+let gamer1 = new Account(200);
+gamer1.lottery();
+
+let gamer2= new Account(60);
+gamer2.lottery();
+
+let gamer3= new Account(150);
+gamer3.lottery();
+
+
     </script>
 </body>
+
 </html>
