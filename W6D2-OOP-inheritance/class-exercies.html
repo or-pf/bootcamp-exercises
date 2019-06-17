@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>OOP- inheritance</title>
+</head>
+
+<body>
+    <script>
+        class Animal {
+            constructor(name, type) {
+                this.name = name;
+                this.type = type;
+            }
+        }
+
+        class Cat extends Animal {
+            constructor(name, isFriendly) {
+                super(name, "cat");
+                this.isFriendly = isFriendly;
+            }
+
+            friendly() {
+                console.log("I am " + this.name)
+                if (this.isFriendly) {
+                    console.log("and I am a friendly cat")
+                }
+                else
+                    console.log("and I am not a friendly cat")
+            }
+        }
+
+        let looli = new Cat("looli", true);
+        looli.friendly();
+
+
+        class Drink {
+            constructor(title, isHot) {
+                this.title = title;
+                this.isHot = isHot;
+            }
+        }
+        class Coffee extends Drink {
+            constructor(name, numberOfShots, milk, isHot) {
+                super("coffee", isHot)
+                this.name = name;
+                this.numberOfShots = numberOfShots;
+                this.milk = milk;
+                this.isHot = isHot;
+            }
+
+            instructions(){
+                console.log(`to make a ${this.name} add ${this.numberOfShots} coffee shots`);
+                if (this.milk){
+                    console.log(`and add milk`);
+                } 
+                else console.log(`and don't add milk`);
+
+                if (this.isHot){
+                    console.log (`carful, it is HOT!`);
+                }
+            }
+
+        }
+
+        let coffee1 = new Coffee ("espresso", 3, false, true);
+        let coffee2= new Coffee ("capuccino",2, true, false );
+        coffee1.instructions();
+        coffee2.instructions();
+
+    </script>
+</body>
+
+</html>

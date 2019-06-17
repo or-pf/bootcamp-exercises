@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>OOP2- ex4</title>
+</head>
+
+<body>
+    <script>
+        class Plant {
+            constructor(name, season, color, ifBlossom) {
+                this.name = name;
+                this.season = season;
+                this.color = color;
+                this.ifBlossom = ifBlossom;
+            }
+        }
+
+        let plant1 = new Plant("lili", "summer", "red", true);
+        let plant2 = new Plant("narkis", 'winter', 'green', true);
+        let plant3 = new Plant('savion', 'spring', 'blue', false);
+        let plant4 = new Plant('sunflower', 'summer', 'yellow', true);
+
+        function getPlantsBySeason(plants, season) {
+            plants.forEach(element => {
+                if ((this.ifBlossom) && (this.season === season)) {
+                    console.log(`${this.name} blossom in ${season}`);
+                    // return element
+                }
+            });
+        }
+
+        var getPlantsBinded= getPlantsBySeason.bind(Plant);
+
+
+        let plants = [plant1, plant2, plant3, plant4]
+
+        // getPlantsBySeason(plants, "summer");
+        getPlantsBinded(plants, "summer");
+    </script>
+
+</body>
+
+</html>
