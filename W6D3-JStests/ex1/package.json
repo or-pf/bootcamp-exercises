@@ -1,0 +1,18 @@
+{
+  "name": "w6d3-jstests",
+  "version": "1.0.0",
+  "description": "exercise1",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "mocha tests"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.1.4"
+  }
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>OOP- inheritance- ex1</title>
+</head>
+
+<body>
+    <script>
+        class Student {
+            constructor(name, courses) {
+                this.name = name || "student";
+                this.courses = courses || [];
+            }
+        }
+
+        class Programmer extends Student {
+            constructor(name, courses, OS, language, VSC) {
+                super(name, courses);
+                this.OS = OS;
+                this.language = language;
+                this.VSC = VSC;
+            }
+            isPrograming(language) {
+                if (this.language === language)
+                    return true;
+            }
+        }
+// let pro1= new Programmer("michal", "math", "windows", "js", "C");
+
+        let people = [new Student("michal", "math"), new Programmer("nili", "hebrew", "windows", "python", "A"), new Programmer("amit", "geograpgy", "mac", "JS", "B")]
+
+        function whoKnows(array, language) {
+            array.forEach(element => {
+                if (element instanceof Programmer) {
+                    if (element.isPrograming(language)) {
+                        console.log(element);
+                        return element;
+                    }
+                }
+            });
+        }
+
+        // let bindedIsPrograming = Programmer.isPrograming.bind(Programmer);
+        // function whoKnows(array, language) {
+        //     array.forEach(element => {
+        //         let programmers = element instanceof Programmer;
+        //         let firstWhoKnows = programmers.find(element.bindedIsPrograming(language));
+        //         console.log(firstWhoKnows);
+        //                 return firstWhoKnows;
+        //     });
+        // }
+        whoKnows(people, "JS");
+    </script>
+</body>
+
+</html>
