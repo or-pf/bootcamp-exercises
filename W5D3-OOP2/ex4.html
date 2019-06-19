@@ -26,20 +26,22 @@
 
         function getPlantsBySeason(plants, season) {
             plants.forEach(element => {
-                if ((this.ifBlossom) && (this.season === season)) {
-                    console.log(`${this.name} blossom in ${season}`);
-                    // return element
+                if ((element.ifBlossom) && (element.season === season)) {
+                    console.log(`${element.name} blossom in ${season}`);
+                    return element
                 }
             });
         }
-
-        var getPlantsBinded= getPlantsBySeason.bind(Plant);
-
-
         let plants = [plant1, plant2, plant3, plant4]
 
-        // getPlantsBySeason(plants, "summer");
-        getPlantsBinded(plants, "summer");
+        getPlantsBySeason(plants, "summer");
+
+        // var getPlantsBinded= getPlantsBySeason.bind(Plant);
+        // getPlantsBinded(plants, "summer");
+        // I want to find a way to make it work by a binded function- and to use "this" instead of element in the original function
+        
+
+     
     </script>
 
 </body>
