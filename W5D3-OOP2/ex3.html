@@ -18,38 +18,41 @@
             deposit(value) {
                 this.sum += value;
             }
-            withdraw(value) {
-                this.sum -= value;
-            }
             canWithdraw(value) {
                 if (value < this.sum) return true;
                 else return false;
             }
+            withdraw(value) {
+                if (this.canWithdraw(value) && value > 0) {
+                    this.sum -= value;
+                }
+            }
+
             lottery() {
                 if (!this.canWithdraw(100)) {
                     alert("you don't have enough in your account");
                     return;
                 }
                 let prize = Math.floor(Math.random() * 101);
-                console.log ("prize is "+ prize);
+                console.log("prize is " + prize);
                 let chance = Math.floor(Math.random() * 2);
-                console.log ("chance is "+ chance);
+                console.log("chance is " + chance);
 
                 if (chance === 1) {
                     this.deposit(prize + 30);
                 }
                 else this.withdraw(prize);
-                console.log (this.sum);
+                console.log(this.sum);
             }
         }
-let gamer1 = new Account(200);
-gamer1.lottery();
+        let gamer1 = new Account(200);
+        gamer1.lottery();
 
-let gamer2= new Account(60);
-gamer2.lottery();
+        let gamer2 = new Account(60);
+        gamer2.lottery();
 
-let gamer3= new Account(150);
-gamer3.lottery();
+        let gamer3 = new Account(150);
+        gamer3.lottery();
 
 
     </script>
