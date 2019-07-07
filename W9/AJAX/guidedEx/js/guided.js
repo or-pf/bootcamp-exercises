@@ -48,7 +48,7 @@ checkIfUserExists = function () {
             }
         },
         error: function (msg) {
-            console.log("error");
+            console.log("err");
             $(".msg").empty();
             $(".msg").append(msg)
         },

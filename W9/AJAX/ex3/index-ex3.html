@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ajax ex3</title>
+    <style>
+    #AC-On{
+        width: 70vw;
+        height: 70vh;
+        background-image: url(./ac-on.png);
+        background-size: cover;
+        display: none;
+    }
+    #AC-Off{
+        width: 70vw;
+        height: 70vh;
+        background-image: url(./ac-off.jpg);
+        background-size: cover;
+        display: none;
+    }
+    #mode, #temp{
+        width: 70vw;
+        background-color: antiquewhite;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 1em;
+        text-align: center;
+    }
+    </style>
+</head>
+<div class="container-fluid">
+<div id="AC-On"></div>
+<div id="AC-Off"></div>
+<div id= "mode"></div>
+<div id= "temp"></div>
+
+</div>
+
+<body>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./logic-ex3.js"></script>
+
+</body>
+
+</html>
