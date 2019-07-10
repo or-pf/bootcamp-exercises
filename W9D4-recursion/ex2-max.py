@@ -20,15 +20,20 @@ assert(find_max([11], 1) == 11)
 assert(find_max([11, 0], 1) == 11)
 assert(find_max([11, -19], 1) == 11)
 
+
+
 """
-    if index= len(numbers)-2:
-        if numbers[index]>= numbers[index+1]:
-            return numbers[index]
-        else return numbers[index+1]
+def max_num(numbers):
+    length= len(numbers)
+    if length==0:
+        return 0
+    elif length==1:
+        return numbers[0]
+    elif numbers[0] >= numbers[1]:
+        del numbers[1]
+    elif numbers[0] < numbers[1]:
+        del numbers[0]
+    return max_num(numbers)
 
-return 
-        if numbers[index]>= find_max(numbers, index+1):
-            return numbers[index]
-        else return find_max(numbers, index+1)
-
+print(max_num([1,2,3,4]))
 """
