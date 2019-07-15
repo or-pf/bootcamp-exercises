@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>python server side- ex2</title>
+</head>
+
+<body>
+    <h2>colors</h2>
+    <div id="colorsList"></div>
+    <script>
+        $.ajax({
+            type: "GET",
+            url: "/colorslist",
+        }).done(function (data) {
+            $("#colorsList").append($("<ul/>"));
+            var colors = JSON.parse(data);
+            colors.forEach(function (element) {
+                var color = element.name + "has this HEX code: " + element.code;
+                $("#colorsList ul").append($("<li/>").html(color));
+            });
+        });
+    </script>
+
+</body>
+
+</html>
