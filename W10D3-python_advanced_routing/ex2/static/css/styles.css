@@ -1,8 +1,15 @@
 .container{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 18px;
-    background-color:lightcoral;
+    font-size: 12px;
+    padding:2px;
+    margin: 3px;
+    font-style: italic
+    
 }
 body{
-    background-color:lightgreen;
+    background-color:rgb(244, 247, 248);
+}
+#themarker_span li{
+    direction: rtl;
+    text-align: right;
 }

@@ -33,7 +33,7 @@ $("#themarker").click(function () {
             title.text(element.title);
             let link = $("<a/>");
             link.attr("href", `${element.link}`);
-            link.text(" For the full story click here");  
+            link.text(" לחצי לסיפור המלא ");  
             title.append(link);
 
             $("#themarker_span").append(title);
