@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jinja templates ex3 </title>
+</head>
+
+<body>
+    <h1> Welcome {{new_user.first_name|capitalize}} </h1>
+    <p> We are very happy to greet you {{new_user.first_name|capitalize}} {{last_name|capitalize}}!</p>
+
+    {% if Win %}
+    <div>
+        Congratulation {{new_user.first_name|capitalize}} You won the lottery!
+        In order to get the prize you need to:
+        <ul>
+            {% for step in steps %}
+            <li>{{step}}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% else %}
+    <div>Sorry {{new_user.first_name|capitalize}}, you did not win the lottery this time.</div>
+    {% endif %}
+</body>
+
+</html>
